@@ -7,12 +7,10 @@
 
 function solution(phone_number) {
     var answer = '';
-    console.log(phone_number.slice(-4))
 
-    //4444로 변경 그앞에 값들은 어떻게 할지?
-    let changes = phone_number.slice(0,-4) 
-    console.log(changes.replace)
-    // console.log(changes.replaceAll('*'))
+    let lastFour = phone_number.slice(-4)
+    let changes = phone_number.slice(0,-4).replace(/\d/gi, "*") 
 
+    var answer = changes + lastFour
     return answer;
 }
